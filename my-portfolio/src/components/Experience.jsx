@@ -9,12 +9,14 @@ export default function Experience(){
           <div className="card card-theme p-3 mb-3">
             <h5>Project Engineer — Wipro</h5>
             <div className="text-muted small">June 2024 - Present</div>
-            <p className="mt-2 mb-0">Working on enterprise web applications, focusing on modern frontends with Angular and React, and backend services with .NET Core and Entity Framework. Responsibilities include feature development, code reviews, and collaborating with cross-functional teams.</p>
-          </div>
-          <div className="card card-theme p-3 mb-3">
-            <h5>Freelance / Personal Projects</h5>
-            <div className="text-muted small">Ongoing</div>
-            <p className="mt-2 mb-0">Building personal projects to explore performance optimization, design systems, and full-stack patterns. I maintain a few sample repositories that showcase SPA patterns and clean APIs.</p>
+            <div className="mt-3">
+              <p className="mb-1"><strong>Full-Stack Development</strong>: Developed and maintained full-stack web applications using React.js, Angular and ASP.NET Core.</p>
+              <p className="mb-1"><strong>UI & State Management</strong>: Built reusable UI components and used Redux for efficient state management when appropriate; designed user interfaces and implemented business logic with route protection patterns like AuthGuard.</p>
+              <p className="mb-1"><strong>Data Access & Optimization</strong>: Implemented LINQ query operations (grouping, ordering, filtering) with Entity Framework, used AutoMapper for DTO mapping, and optimized backend logic for performance.</p>
+              <p className="mb-1"><strong>API Integration & Backend</strong>: Integrated APIs and built backend services using ASP.NET Core and SQL Server; applied Entity Framework for database operations.</p>
+              <p className="mb-1"><strong>Productivity & Tooling</strong>: Boosted productivity and code quality leveraging GitHub Copilot; used Git and Azure DevOps for source control and CI/CD pipelines.</p>
+              <p className="mb-1"><strong>Collaboration & Agile</strong>: Worked closely with QA and design teams to deliver intuitive user experiences; participated in code reviews, sprint planning, and Agile ceremonies.</p>
+            </div>
           </div>
         </div>
       </div>

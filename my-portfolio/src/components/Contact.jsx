@@ -1,4 +1,6 @@
 import React from 'react'
+import { FiMail, FiPhone, FiMapPin } from 'react-icons/fi'
+import { FaLinkedin } from 'react-icons/fa'
 
 export default function Contact(){
   return (
@@ -25,9 +27,10 @@ export default function Contact(){
           </div>
           <div className="col-md-6 d-flex align-items-center">
             <div>
-              <p className="mb-1"><strong>Email</strong>: babinb128@gmail.com</p>
-              <p className="mb-1"><strong>Phone</strong>: +91 6383576331</p>
-              <p className="mb-0"><strong>Location</strong>: India</p>
+              <p className="mb-2"><FiMail className="me-2"/> <strong>Email</strong>: <a className="text-decoration-none" href="mailto:babinb128@gmail.com">babinb128@gmail.com</a></p>
+              <p className="mb-2"><FiPhone className="me-2"/> <strong>Phone</strong>: +91 6383576331</p>
+              <p className="mb-2"><FiMapPin className="me-2"/> <strong>Location</strong>: India</p>
+              <p className="mb-0"><FaLinkedin className="me-2"/> <strong>LinkedIn</strong>: <a className="text-decoration-none" href="https://www.linkedin.com/in/babin-bj-1b33b8229" target="_blank" rel="noopener noreferrer">linkedin.com/in/babin-bj-1b33b8229</a></p>
             </div>
           </div>
         </div>

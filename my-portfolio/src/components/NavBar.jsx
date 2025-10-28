@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function NavBar(){
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-transparent">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-transparent" id="top">
       <div className="container-lg">
-        <a className="navbar-brand brand-color fw-bold" href="#">Babin B J</a>
+        <a className="navbar-brand brand-color fw-bold" href="#top">Babin B J</a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -15,6 +15,7 @@ export default function NavBar(){
             <li className="nav-item"><a className="nav-link" href="#skills">Skills</a></li>
             <li className="nav-item"><a className="nav-link" href="#projects">Projects</a></li>
             <li className="nav-item"><a className="nav-link" href="#contact">Contact</a></li>
+            <li className="nav-item"><a className="nav-link" href="https://www.linkedin.com/in/babin-bj-1b33b8229" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
           </ul>
         </div>
       </div>

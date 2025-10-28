@@ -44,3 +44,12 @@ code{font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monos
 .section-title{color:var(--purple-400);font-weight:700}
 
 .footer{padding:2rem 0;color:var(--muted)}
+
+/* Clickable card subtle hover */
+.clickable{cursor:pointer;transition:transform .12s ease,box-shadow .12s ease}
+.clickable:hover{transform:translateY(-6px);box-shadow:0 8px 30px rgba(124,58,237,0.15)}
+
+/* Improve contrast for muted text in dark theme */
+.text-muted{color:var(--muted) !important}
+.card-theme .text-muted{color:#d6d6ec !important}
+.lead{color:#d6d6ec}
