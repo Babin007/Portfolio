@@ -81,15 +81,15 @@ export default function Contact(){
             <form ref={formRef} className="card card-theme p-3" onSubmit={handleSubmit}>
               <div className="mb-3">
                 <label className="form-label">Name</label>
-                <input name="from_name" className="form-control bg-transparent text-white" placeholder="Your full name" required />
+                <input name="from_name" className="form-control bg-transparent text-white" placeholder="Your name" required />
               </div>
               <div className="mb-3">
                 <label className="form-label">Email</label>
-                <input name="from_email" type="email" className="form-control bg-transparent text-white" placeholder="you@domain.com" required />
+                <input name="from_email" type="email" className="form-control bg-transparent text-white" placeholder="you@emailId.com" required />
               </div>
               <div className="mb-3">
                 <label className="form-label">Message</label>
-                <textarea name="message" className="form-control bg-transparent text-white" rows="4" placeholder="Briefly describe your project: goals, timeline, budget..." required></textarea>
+                <textarea name="message" className="form-control bg-transparent text-white" rows="4" placeholder="Write you message..." required></textarea>
               </div>
               {/* File upload removed - form sends only text fields (from_name, from_email, message) */}
               <button className="btn btn-primary" style={{backgroundColor:'#7c3aed',borderColor:'#7c3aed'}} disabled={loading}>
