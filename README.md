@@ -68,3 +68,30 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## EmailJS setup (client-side email sending)
+
+This project uses EmailJS for client-side email sending from the `Contact` form (no backend required). If you see an "Invalid Public Key" error, follow these steps:
+
+1. Sign in to EmailJS: https://dashboard.emailjs.com/
+2. Go to Account -> Integration (or Admin -> Account) to find your Public Key (it looks like `user_xxx...`).
+3. Create a Service (SMTP provider) and a Template. In the Template, reference these fields: `from_name`, `from_email`, `message`. If you allow file attachments, name the file input `attachment` in the form (the component uses this name already).
+4. Create a local environment file (do not commit it): copy `.env.example` to `.env.local` and replace placeholders with your values:
+
+```
+REACT_APP_EMAILJS_SERVICE_ID=service_xxx
+REACT_APP_EMAILJS_TEMPLATE_ID=template_xxx
+REACT_APP_EMAILJS_PUBLIC_KEY=user_xxx
+```
+
+5. Restart the React dev server (so Create React App picks up the env vars):
+
+```bash
+npm start
+```
+
+Notes:
+- Don't commit `.env.local` to version control. Keep the keys private.
+- If you still get errors, confirm the Public Key on the EmailJS dashboard matches exactly, and double-check the Template ID and Service ID.
+- EmailJS supports file uploads via `sendForm` — the component's file input is named `attachment` and is validated for a 5MB limit.
+

@@ -15,7 +15,7 @@ export default function Skills(){
           ))}
         </div>
         <div className="mt-3 small">
-          <strong>Certification:</strong> <a className="text-decoration-none" href="https://www.credly.com/badges/9106c759-ffc9-4710-8475-6b81f9408698/public_url" target="_blank" rel="noopener noreferrer">GitHub Certified</a>
+          <strong>Certification:</strong> <a className="text-decoration-none" href="https://www.credly.com/badges/9106c759-ffc9-4710-8475-6b81f9408698/public_url" target="_blank" rel="noopener noreferrer">GitHub Copilot</a>
         </div>
       </div>
     </section>

@@ -25,7 +25,7 @@ export default function About(){
               <p className="mb-0"><strong>Since:</strong> June 2024 — Present</p>
               <hr/>
               <p className="mb-1"><strong>Certification</strong></p>
-              <p className="small"><a className="text-decoration-none" href="https://www.credly.com/badges/9106c759-ffc9-4710-8475-6b81f9408698/public_url" target="_blank" rel="noopener noreferrer">GitHub Certified</a></p>
+              <p className="small"><a className="text-decoration-none" href="https://www.credly.com/badges/9106c759-ffc9-4710-8475-6b81f9408698/public_url" target="_blank" rel="noopener noreferrer">GitHub Copilot</a></p>
               <p className="mb-0 small"><a className="text-decoration-none" href="https://www.linkedin.com/in/babin-bj-1b33b8229" target="_blank" rel="noopener noreferrer">LinkedIn profile</a></p>
             </div>
           </div>
