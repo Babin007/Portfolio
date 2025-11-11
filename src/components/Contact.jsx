@@ -1,12 +1,15 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import { FiMail, FiPhone, FiMapPin } from 'react-icons/fi'
 import { FaLinkedin } from 'react-icons/fa'
 import emailjs from '@emailjs/browser'
+import data from '../data'
 
 export default function Contact(){
-  const formRef = useRef(null)
+  const section = data.contact
   const [loading, setLoading] = useState(false)
   const [status, setStatus] = useState(null)
+  // don't return early before hooks — check isNeed after hooks
+  if (!section || !section.isNeed) return null
 
 
   const handleSubmit = async (e) => {
@@ -25,17 +28,18 @@ export default function Contact(){
     }
 
     try {
-      // emailjs.sendForm will include file inputs automatically
+      // emailjs.sendForm will include form fields; use the event target (form) instead of a ref
+      const formEl = e.target
       const result = await emailjs.sendForm(
         SERVICE_ID,
         TEMPLATE_ID,
-        formRef.current,
+        formEl,
         PUBLIC_KEY
       )
 
       if (result.status === 200) {
         setStatus({ ok: true, msg: 'Message sent — thanks!' })
-        formRef.current.reset()
+        e.target.reset()
       } else {
         setStatus({ ok: false, msg: 'Failed to send message' })
       }
@@ -69,7 +73,7 @@ export default function Contact(){
         #contact input:focus,
         #contact textarea:focus {
           box-shadow: 0 0 0 0.15rem rgba(124,58,237,0.15);
-          border-color: #7c3aed;
+          border-color: var(--purple-500);
           outline: none;
         }
       `}</style>
@@ -78,7 +82,7 @@ export default function Contact(){
         <h3 className="section-title">Contact</h3>
         <div className="row mt-3">
           <div className="col-md-6">
-            <form ref={formRef} className="card card-theme p-3" onSubmit={handleSubmit}>
+            <form className="card card-theme p-3" onSubmit={handleSubmit}>
               <div className="mb-3">
                 <label className="form-label">Name</label>
                 <input name="from_name" className="form-control bg-transparent text-white" placeholder="Your name" required />
@@ -92,7 +96,7 @@ export default function Contact(){
                 <textarea name="message" className="form-control bg-transparent text-white" rows="4" placeholder="Write you message..." required></textarea>
               </div>
               {/* File upload removed - form sends only text fields (from_name, from_email, message) */}
-              <button className="btn btn-primary" style={{backgroundColor:'#7c3aed',borderColor:'#7c3aed'}} disabled={loading}>
+              <button className="btn btn-primary" style={{backgroundColor:'var(--purple-500)',borderColor:'var(--purple-500)'}} disabled={loading}>
                 {loading ? 'Sending…' : 'Send'}
               </button>
               {status && (
@@ -102,9 +106,9 @@ export default function Contact(){
           </div>
           <div className="col-md-6 d-flex align-items-center">
             <div>
-              <p className="mb-2"><FiMail className="me-2"/> <strong>Email</strong>: <a className="text-decoration-none" href="mailto:babinb128@gmail.com">babinb128@gmail.com</a></p>
-              <p className="mb-2"><FiPhone className="me-2"/> <strong>Phone</strong>: +91 6383576331</p>
-              <p className="mb-2"><FiMapPin className="me-2"/> <strong>Location</strong>: India</p>
+              <p className="mb-2"><FiMail className="me-2"/> <strong>Email</strong>: <a className="text-decoration-none" href={`mailto:${section.email}`}>{section.email}</a></p>
+              <p className="mb-2"><FiPhone className="me-2"/> <strong>Phone</strong>: {section.phone}</p>
+              <p className="mb-2"><FiMapPin className="me-2"/> <strong>Location</strong>: {section.location}</p>
               <p className="mb-0"><FaLinkedin className="me-2"/> <strong>LinkedIn</strong>: <a className="text-decoration-none" href="https://www.linkedin.com/in/babin-bj-1b33b8229" target="_blank" rel="noopener noreferrer">linkedin.com/in/babin-bj-1b33b8229</a></p>
             </div>
           </div>

@@ -2,7 +2,8 @@
   --purple-600: #6b21a8;
   --purple-500: #7c3aed;
   --purple-400: #9f7aea;
-  --bg: #0f0b16;
+  --bg-start: #0b0710;
+  --bg-end: #0f0920;
   --card: #ffffff;
   --muted: #c7c7d9;
 }
@@ -13,7 +14,7 @@ body{
   font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
-  background: linear-gradient(180deg, #0b0710 0%, #0f0920 100%);
+  background: linear-gradient(180deg, var(--bg-start) 0%, var(--bg-end) 100%);
   color: #fff;
 }
 
