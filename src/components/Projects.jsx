@@ -59,9 +59,11 @@ export default function Projects(){
               <div className="modal-body">
                 {current && (
                   <>
-                    <p><strong>Frameworks:</strong> {current.frameworks.join(', ')}</p>
-                    <ul>
-                      {current.bullets.map((b,i) => <li key={i}>{b}</li>)}
+                    <p><strong>Tools:</strong> {current.frameworks.join(', ')}</p>
+                    <ul style={{listStylePosition: 'outside', paddingLeft: '0.6rem', marginLeft: 0}}>
+                      {current.bullets.map((b,i) => (
+                        <li key={i} style={{marginBottom: '0.5rem', paddingLeft: 0, marginLeft: 0}}>{b}</li>
+                      ))}
                     </ul>
                   </>
                 )}
