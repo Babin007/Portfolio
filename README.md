@@ -95,3 +95,5 @@ Notes:
 - If you still get errors, confirm the Public Key on the EmailJS dashboard matches exactly, and double-check the Template ID and Service ID.
 - EmailJS supports file uploads via `sendForm` — the component's file input is named `attachment` and is validated for a 5MB limit.
 
+
+--Please update .emv file with your Email JS account to recieve mails

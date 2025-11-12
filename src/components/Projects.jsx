@@ -60,7 +60,7 @@ export default function Projects(){
                 {current && (
                   <>
                     <p><strong>Tools:</strong> {current.frameworks.join(', ')}</p>
-                    <ul style={{listStylePosition: 'outside', paddingLeft: '0.6rem', marginLeft: 0}}>
+                    <ul style={{listStylePosition: 'outside', paddingLeft: '0.6rem', marginLeft: 0,textAlign: 'justify'}}>
                       {current.bullets.map((b,i) => (
                         <li key={i} style={{marginBottom: '0.5rem', paddingLeft: 0, marginLeft: 0}}>{b}</li>
                       ))}

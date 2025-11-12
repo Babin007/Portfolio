@@ -10,8 +10,8 @@ export default function Footer(){
     <footer className="footer">
       <div className="container-lg">
         <div className="d-flex justify-content-between align-items-center">
-          <div className="small">© {new Date().getFullYear()} Babin B J — Built with React & Bootstrap</div>
-          <div className="small text-muted">{section.extra} • <a className="text-decoration-none d-inline-flex align-items-center" href="https://www.linkedin.com/in/babin-bj-1b33b8229" target="_blank" rel="noopener noreferrer"><FaLinkedin className="me-2"/>LinkedIn</a></div>
+          <div className="small">{section.text.replace('{year}', new Date().getFullYear())}</div>
+          <div className="small text-muted">{section.extra} • <a className="text-decoration-none d-inline-flex align-items-center" href={section.link.href} target="_blank" rel="noopener noreferrer"><FaLinkedin className="me-2"/>{section.link.label}</a></div>
         </div>
       </div>
     </footer>

@@ -23,7 +23,7 @@ export default function Hero(){
           </div>
           <div className="col-md-5 text-center mt-4 mt-md-0">
             <div className="card card-theme p-3">
-              <img alt="profile" className="profile-pic mb-3" src={section.profilePic} />
+              <img alt="profile" className="profile-pic mb-3 d-block mx-auto" src={section.profilePic} />
               <h5 className="mb-0">{section.name}</h5>
               <div className="text-muted small">Project Engineer @ Wipro</div>
               <p className="mt-2 mb-0 small text-muted"><FiMail className="me-2"/> <a className="text-decoration-none text-muted" href={`mailto:${data.contact.email}`}>{data.contact.email}</a></p>

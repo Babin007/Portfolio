@@ -96,7 +96,12 @@ const data = {
   footer: {
     isNeed: 1,
     text: '© {year} Babin B J — Built with React & Bootstrap',
-    extra: 'Made with ❤️ in purple'
+    extra: 'Made with ❤️ in purple',
+    // footer link (moved from component)
+    link: {
+      label: 'LinkedIn',
+      href: 'https://www.linkedin.com/in/babin-bj-1b33b8229'
+    }
   },
 
   navbar: {
